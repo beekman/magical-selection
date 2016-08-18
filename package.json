@@ -1,7 +1,7 @@
 {
   "name": "rainbow-selection-flux",
   "main": "./lib/rainbow-selection-flux",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Selections are so much more fun when they're a slowly morphing rainbow.",
   "keywords": [],
   "activationCommands": {
