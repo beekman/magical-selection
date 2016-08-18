@@ -8,7 +8,7 @@
   "activationCommands": {
     "atom-workspace": "rainbow-selection-flux:toggle"
   },
-  "repository": "https://github.com/atom/rainbow-selection-flux",
+  "repository": "https://github.com/beekman/rainbow-selection-flux",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
