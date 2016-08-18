@@ -1,0 +1,5 @@
+{
+  "atom-workspace": {
+    "ctrl-alt-cmd-r": "rainbow-selection-flux:toggle"
+  }
+}

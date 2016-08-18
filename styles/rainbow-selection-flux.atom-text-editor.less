@@ -1,0 +1,85 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+atom-text-editor::shadow
+{
+    .cursor
+    {
+        border-left-width: 3px;
+    }
+
+    /* @mhulse's custom gradient rainbow. */
+    .selection .region
+    {
+        -webkit-animation: rainbow-selection 10s linear infinite;
+
+        border-radius: 3px;
+        background: linear-gradient(
+        to right,
+        fade(#ff0, 20%) 0%,
+        fade(#0f0, 20%) 15%,
+        fade(#0ff, 20%) 30%,
+        fade(#00f, 20%) 50%,
+        fade(#f0f, 20%) 65%,
+        fade(#f00, 20%) 80%,
+        fade(#ff0, 20%) 100%
+        );
+        background: linear-gradient( to right, rgba(255, 255, 0, .3) 0%, rgba(0, 255, 0, .3) 15%, rgba(0, 255, 255, .3) 30%, rgba(0, 0, 255, .3) 50%, rgba(255, 0, 255, .3) 65%, rgba(255, 0, 0, .3) 80%, rgba(255, 255, 0, .3) 100% );
+        background-size: 500px;
+        box-shadow: inset 0 0 1px 1px fade(#fff, 50%);
+    }
+}
+
+
+@-webkit-keyframes rainbow-selection
+{
+    @saturation: 60%;
+    @lightness: 20%;
+    @opacity: 1;
+    @step: 360/10;
+    0%
+    {
+        background-color: hsl(0 * @step, @saturation, @lightness, @opacity);
+    }
+    10%
+    {
+        background-color: hsl(1 * @step, @saturation, @lightness, @opacity);
+    }
+    20%
+    {
+        background-color: hsl(2 * @step, @saturation, @lightness, @opacity);
+    }
+    30%
+    {
+        background-color: hsl(3 * @step, @saturation, @lightness, @opacity);
+    }
+    40%
+    {
+        background-color: hsl(4 * @step, @saturation, @lightness, @opacity);
+    }
+    50%
+    {
+        background-color: hsl(5 * @step, @saturation, @lightness, @opacity);
+    }
+    60%
+    {
+        background-color: hsl(6 * @step, @saturation, @lightness, @opacity);
+    }
+    70%
+    {
+        background-color: hsl(7 * @step, @saturation, @lightness, @opacity);
+    }
+    80%
+    {
+        background-color: hsl(8 * @step, @saturation, @lightness, @opacity);
+    }
+    90%
+    {
+        background-color: hsl(9 * @step, @saturation, @lightness, @opacity);
+    }
+    100%
+    {
+        background-color: hsl(10 * @step, @saturation, @lightness, @opacity);
+    }
+}
