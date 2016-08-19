@@ -1,16 +1,10 @@
 {
   "name": "rainbow-selection-flux",
-  "main": "./lib/rainbow-selection-flux",
-  "version": "0.3.0",
-  "description": "Selections are so much more fun when they're a slowly morphing rainbow.",
-  "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "rainbow-selection-flux:toggle"
-  },
-  "repository": "https://github.com/beekman/rainbow-selection-flux",
-  "license": "MIT",
+  "version": "0.1.0",
+  "description": "REALLY unnecessarily colourful selections",
+  "repository": "https://github.com/beekman/Rainbow-Selection-Flux",
+  "license": "Apache License, Version 2.0",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "dependencies": {}
+    "atom": ">0.175.0"
+  }
 }
