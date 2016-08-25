@@ -1,74 +1,75 @@
 // h/t @mhulse and @dmnd.
 
+
 // Light theme:
+@keyframes rainbow-shift-light
+{
+    0%
+    {
+        background-position: 0% 50%;
+    }
+    50%
+    {
+        background-position: 100% 50%;
+    }
+    100%
+    {
+        background-position: 0% 50%;
+    }
+}
+@keyframes rainbow-cycle-light
+{
+    @saturation: 100%;
+    @lightness: 100%;
+    @opacity: .9;
+    @step: (360 / 10);
+    0%
+    {
+        background-color: hsla(0 * @step, @saturation, @lightness, @opacity);
+    }
+    10%
+    {
+        background-color: hsla(1 * @step, @saturation, @lightness, @opacity);
+    }
+    20%
+    {
+        background-color: hsla(2 * @step, @saturation, @lightness, @opacity);
+    }
+    30%
+    {
+        background-color: hsla(3 * @step, @saturation, @lightness, @opacity);
+    }
+    40%
+    {
+        background-color: hsla(4 * @step, @saturation, @lightness, @opacity);
+    }
+    50%
+    {
+        background-color: hsla(5 * @step, @saturation, @lightness, @opacity);
+    }
+    60%
+    {
+        background-color: hsla(6 * @step, @saturation, @lightness, @opacity);
+    }
+    70%
+    {
+        background-color: hsla(7 * @step, @saturation, @lightness, @opacity);
+    }
+    80%
+    {
+        background-color: hsla(8 * @step, @saturation, @lightness, @opacity);
+    }
+    90%
+    {
+        background-color: hsla(9 * @step, @saturation, @lightness, @opacity);
+    }
+    100%
+    {
+        background-color: hsla(10 * @step, @saturation, @lightness, @opacity);
+    }
+}
 :host-context(.magical-selection-light)
 {
-    @keyframes rainbow-shift
-    {
-        0%
-        {
-            background-position: 0% 50%;
-        }
-        50%
-        {
-            background-position: 100% 50%;
-        }
-        100%
-        {
-            background-position: 0% 50%;
-        }
-    }
-    @keyframes rainbow-cycle
-    {
-        @saturation: 100%;
-        @lightness: 100%;
-        @opacity: .9;
-        @step: (360 / 10);
-        0%
-        {
-            background-color: hsla(0 * @step, @saturation, @lightness, @opacity);
-        }
-        10%
-        {
-            background-color: hsla(1 * @step, @saturation, @lightness, @opacity);
-        }
-        20%
-        {
-            background-color: hsla(2 * @step, @saturation, @lightness, @opacity);
-        }
-        30%
-        {
-            background-color: hsla(3 * @step, @saturation, @lightness, @opacity);
-        }
-        40%
-        {
-            background-color: hsla(4 * @step, @saturation, @lightness, @opacity);
-        }
-        50%
-        {
-            background-color: hsla(5 * @step, @saturation, @lightness, @opacity);
-        }
-        60%
-        {
-            background-color: hsla(6 * @step, @saturation, @lightness, @opacity);
-        }
-        70%
-        {
-            background-color: hsla(7 * @step, @saturation, @lightness, @opacity);
-        }
-        80%
-        {
-            background-color: hsla(8 * @step, @saturation, @lightness, @opacity);
-        }
-        90%
-        {
-            background-color: hsla(9 * @step, @saturation, @lightness, @opacity);
-        }
-        100%
-        {
-            background-color: hsla(10 * @step, @saturation, @lightness, @opacity);
-        }
-    }
     .selection .region
     {
         border-radius: 3px;
@@ -91,80 +92,83 @@
     }
     .selection .region
     {
-        animation: rainbow-cycle 10s linear infinite,
-        rainbow-shift 30s ease infinite;
+        animation: rainbow-cycle-light 10s linear infinite,
+        rainbow-shift-light 30s ease infinite;
+    }
+}
+
+
+@keyframes rainbow-shift-dark
+{
+    0%
+    {
+        background-position: 0% 50%;
+    }
+    50%
+    {
+        background-position: 100% 50%;
+    }
+    100%
+    {
+        background-position: 0% 50%;
+    }
+}
+@keyframes rainbow-cycle-dark
+{
+    @saturation: 60%;
+    @lightness: 10%;
+    @opacity: .75;
+    @step: (360 / 10);
+    0%
+    {
+        background-color: hsl(0 * @step, @saturation, @lightness, @opacity);
+    }
+    10%
+    {
+        background-color: hsl(1 * @step, @saturation, @lightness, @opacity);
+    }
+    20%
+    {
+        background-color: hsl(2 * @step, @saturation, @lightness, @opacity);
+    }
+    30%
+    {
+        background-color: hsl(3 * @step, @saturation, @lightness, @opacity);
+    }
+    40%
+    {
+        background-color: hsl(4 * @step, @saturation, @lightness, @opacity);
+    }
+    50%
+    {
+        background-color: hsl(5 * @step, @saturation, @lightness, @opacity);
+    }
+    60%
+    {
+        background-color: hsl(6 * @step, @saturation, @lightness, @opacity);
+    }
+    70%
+    {
+        background-color: hsl(7 * @step, @saturation, @lightness, @opacity);
+    }
+    80%
+    {
+        background-color: hsl(8 * @step, @saturation, @lightness, @opacity);
+    }
+    90%
+    {
+        background-color: hsl(9 * @step, @saturation, @lightness, @opacity);
+    }
+    100%
+    {
+        background-color: hsl(10 * @step, @saturation, @lightness, @opacity);
     }
 }
 
 :host-context(.magical-selection-dark)
 {
-    // Dark theme:
-    // @keyframes rainbow-shift
-    // {
-    //     0%
-    //     {
-    //         background-position: 0% 50%;
-    //     }
-    //     50%
-    //     {
-    //         background-position: 100% 50%;
-    //     }
-    //     100%
-    //     {
-    //         background-position: 0% 50%;
-    //     }
-    // }
-    // @keyframes rainbow-cycle
-    // {
-    //     @saturation: 60%;
-    //     @lightness: 10%;
-    //     @opacity: .75;
-    //     @step: (360 / 10);
-    //     0%
-    //     {
-    //         background-color: hsl(0 * @step, @saturation, @lightness, @opacity);
-    //     }
-    //     10%
-    //     {
-    //         background-color: hsl(1 * @step, @saturation, @lightness, @opacity);
-    //     }
-    //     20%
-    //     {
-    //         background-color: hsl(2 * @step, @saturation, @lightness, @opacity);
-    //     }
-    //     30%
-    //     {
-    //         background-color: hsl(3 * @step, @saturation, @lightness, @opacity);
-    //     }
-    //     40%
-    //     {
-    //         background-color: hsl(4 * @step, @saturation, @lightness, @opacity);
-    //     }
-    //     50%
-    //     {
-    //         background-color: hsl(5 * @step, @saturation, @lightness, @opacity);
-    //     }
-    //     60%
-    //     {
-    //         background-color: hsl(6 * @step, @saturation, @lightness, @opacity);
-    //     }
-    //     70%
-    //     {
-    //         background-color: hsl(7 * @step, @saturation, @lightness, @opacity);
-    //     }
-    //     80%
-    //     {
-    //         background-color: hsl(8 * @step, @saturation, @lightness, @opacity);
-    //     }
-    //     90%
-    //     {
-    //         background-color: hsl(9 * @step, @saturation, @lightness, @opacity);
-    //     }
-    //     100%
-    //     {
-    //         background-color: hsl(10 * @step, @saturation, @lightness, @opacity);
-    //     }
-    // }
+    //    Dark theme:
+
     .selection .region
     {
         border-radius: 3px;
@@ -185,7 +189,7 @@
 
     .selection .region
     {
-        animation: rainbow-cycle 10s linear infinite,
-        rainbow-shift 30s ease infinite;
+        animation: rainbow-cycle-dark 10s linear infinite,
+        rainbow-shift-dark 30s ease infinite;
     }
 }
