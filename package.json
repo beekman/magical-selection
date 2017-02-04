@@ -1,6 +1,6 @@
 {
   "name": "magical-selection",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Select like a Sourceror! Turns selected text into an animated prism that's unnecessarily colorful and utterly mystical. For best results with dark themes, tick the 'Go Dark' option.",
   "repository": "https://github.com/beekman/magical-selection",
   "license": "Apache License, Version 2.0",
